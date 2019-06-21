@@ -1,196 +1,196 @@
 ######################################
 # Main		 				KEYWORD1 #
 ######################################
-Visualizer					KEYWORD1
+Visualizer	KEYWORD1
 
 ######################################
 # Classes	 				KEYWORD1 #
 ######################################
-Terminal					KEYWORD1
-Graph						KEYWORD1
-GraphAxis					KEYWORD1
-GraphAxisChannel			KEYWORD1
-GraphAxisCursor				KEYWORD1
-Dashboard					KEYWORD1
-DashboardLabel				KEYWORD1
-DashboardButton				KEYWORD1
-DashboardNumericInput		KEYWORD1
-DashboardSignal				KEYWORD1
-DashboardRadioGroup			KEYWORD1
-DashboardGraph				KEYWORD1
-DashboardGraphChannel		KEYWORD1
+Terminal	KEYWORD1
+Graph	KEYWORD1
+GraphAxis	KEYWORD1
+GraphAxisChannel	KEYWORD1
+GraphAxisCursor	KEYWORD1
+Dashboard	KEYWORD1
+DashboardLabel	KEYWORD1
+DashboardButton	KEYWORD1
+DashboardNumericInput	KEYWORD1
+DashboardSignal	KEYWORD1
+DashboardRadioGroup	KEYWORD1
+DashboardGraph	KEYWORD1
+DashboardGraphChannel	KEYWORD1
 
 ######################################
 # Configuration				KEYWORD1 #
 ######################################
-ConfigDashboardLabel		KEYWORD1
-ConfigDashboardButton		KEYWORD1
+ConfigDashboardLabel	KEYWORD1
+ConfigDashboardButton	KEYWORD1
 ConfigDashboardNumericInput	KEYWORD1
-ConfigDashboardSignal		KEYWORD1
+ConfigDashboardSignal	KEYWORD1
 ConfigDashboardRadioGroup	KEYWORD1
-ConfigDashboardGraph		KEYWORD1
+ConfigDashboardGraph	KEYWORD1
 
 ######################################
 # Interface 				KEYWORD2 #
 ######################################
-transmit 					KEYWORD2
-receive 					KEYWORD2
-transceive 					KEYWORD2
-onTransmit					KEYWORD2
-onReceive					KEYWORD2
-onTransceive				KEYWORD2
+transmit	KEYWORD2
+receive	KEYWORD2
+transceive	KEYWORD2
+onTransmit	KEYWORD2
+onReceive	KEYWORD2
+onTransceive	KEYWORD2
 
 ######################################
 # Visualizer 				KEYWORD2 #
 ######################################
-request						KEYWORD2
-reset						KEYWORD2
-refresh						KEYWORD2
-addInfo						KEYWORD2
-addTerminal					KEYWORD2
-addGraph					KEYWORD2
-addDashboard				KEYWORD2
+request	KEYWORD2
+reset	KEYWORD2
+refresh	KEYWORD2
+addInfo	KEYWORD2
+addTerminal	KEYWORD2
+addGraph	KEYWORD2
+addDashboard	KEYWORD2
 
 ######################################
 # Terminal					KEYWORD2 #
 ######################################
-available					KEYWORD2
-read						KEYWORD2
-print						KEYWORD2
-println						KEYWORD2
+available	KEYWORD2
+read	KEYWORD2
+print	KEYWORD2
+println	KEYWORD2
 
 ######################################
 # Graph						KEYWORD2 #
 ######################################
-addAxis						KEYWORD2
+addAxis	KEYWORD2
 
 ######################################
 # GraphAxis					KEYWORD2 #
 ######################################
-addChannel					KEYWORD2
-addCursor					KEYWORD2
+addChannel	KEYWORD2
+addCursor	KEYWORD2
 
 ######################################
 # GraphAxisChannel			KEYWORD2 #
 ######################################
-write						KEYWORD2
+write	KEYWORD2
 
 ######################################
 # GraphAxisCursor			KEYWORD2 #
 ######################################
-read						KEYWORD2
-feed						KEYWORD2
+read	KEYWORD2
+feed	KEYWORD2
 
 ######################################
 # Dashboard					KEYWORD2 #
 ######################################
-addButton					KEYWORD2
-addNumericInput				KEYWORD2
-addLabel					KEYWORD2
-addSignal					KEYWORD2
-addRadioGroup				KEYWORD2
-addGraph
+addButton	KEYWORD2
+addNumericInput	KEYWORD2
+addLabel	KEYWORD2
+addSignal	KEYWORD2
+addRadioGroup	KEYWORD2
+addGraph	KEYWORD2
 
 ######################################
 # DashboardButton			KEYWORD2 #
 ######################################
-pressed						KEYWORD2
-toggled						KEYWORD2
+pressed	KEYWORD2
+toggled	KEYWORD2
 
 ######################################
 # DashboardNumericalInput 	KEYWORD2 #
 ######################################
-read						KEYWORD2
-feed						KEYWORD2
+read	KEYWORD2
+feed	KEYWORD2
 
 ######################################
 # DashboardSignal		 	KEYWORD2 #
 ######################################
-on							KEYWORD2
-off							KEYWORD2
+on	KEYWORD2
+off	KEYWORD2
 
 ######################################
 # DashboardRadioGroup		KEYWORD2 #
 ######################################
-selected					KEYWORD2
-feed						KEYWORD2
+selected	KEYWORD2
+feed	KEYWORD2
 
 ######################################
 # DashboardGraph			KEYWORD2 #
 ######################################
-addChannel					KEYWORD2
+addChannel	KEYWORD2
 
 ######################################
 # DashboardGraphChannel		KEYWORD2 #
 ######################################
-write						KEYWORD2
+write	KEYWORD2
 
 ######################################
 # General					LITERAL1 #
 ######################################
-CONFIGURATION_NONE			LITERAL1
-CONFIGURATION_AUTOSTART		LITERAL1
+CONFIGURATION_NONE	LITERAL1
+CONFIGURATION_AUTOSTART	LITERAL1
 
-GATEWAY_EXTERNAL			LITERAL1
-GATEWAY_TWI					LITERAL1
-GATEWAY_SPI					LITERAL1
-GATEWAY_UART				LITERAL1
-GATEWAY_SERIAL				LITERAL1
+GATEWAY_EXTERNAL	LITERAL1
+GATEWAY_TWI	LITERAL1
+GATEWAY_SPI	LITERAL1
+GATEWAY_UART	LITERAL1
+GATEWAY_SERIAL	LITERAL1
 
-BAUDRATE_9600				LITERAL1
-BAUDRATE_19200				LITERAL1
-BAUDRATE_38400				LITERAL1
-BAUDRATE_57600				LITERAL1
-BAUDRATE_115200				LITERAL1
-BAUDRATE_230400				LITERAL1
-BAUDRATE_500000				LITERAL1
-BAUDRATE_1000000			LITERAL1
-BAUDRATE_2000000			LITERAL1
+BAUDRATE_9600	LITERAL1
+BAUDRATE_19200	LITERAL1
+BAUDRATE_38400	LITERAL1
+BAUDRATE_57600	LITERAL1
+BAUDRATE_115200	LITERAL1
+BAUDRATE_230400	LITERAL1
+BAUDRATE_500000	LITERAL1
+BAUDRATE_1000000	LITERAL1
+BAUDRATE_2000000	LITERAL1
 
-COLOR_WHITE					LITERAL1
-COLOR_BLACK					LITERAL1
-COLOR_SILVER				LITERAL1
-COLOR_GRAY					LITERAL1
-COLOR_MAROON				LITERAL1
-COLOR_RED					LITERAL1
-COLOR_PURPLE				LITERAL1
-COLOR_FUCHSIA				LITERAL1
-COLOR_GREEN					LITERAL1
-COLOR_LIME					LITERAL1
-COLOR_OLIVE					LITERAL1
-COLOR_YELLOW				LITERAL1
-COLOR_NAVY					LITERAL1
-COLOR_BLUE					LITERAL1
-COLOR_TEAL					LITERAL1
-COLOR_AQUA					LITERAL1
-COLOR_ORANGE				LITERAL1
+COLOR_WHITE	LITERAL1
+COLOR_BLACK	LITERAL1
+COLOR_SILVER	LITERAL1
+COLOR_GRAY	LITERAL1
+COLOR_MAROON	LITERAL1
+COLOR_RED	LITERAL1
+COLOR_PURPLE	LITERAL1
+COLOR_FUCHSIA	LITERAL1
+COLOR_GREEN	LITERAL1
+COLOR_LIME	LITERAL1
+COLOR_OLIVE	LITERAL1
+COLOR_YELLOW	LITERAL1
+COLOR_NAVY	LITERAL1
+COLOR_BLUE	LITERAL1
+COLOR_TEAL	LITERAL1
+COLOR_AQUA	LITERAL1
+COLOR_ORANGE	LITERAL1
 
-BOLD_OFF_ITALIC_OFF			LITERAL1
-BOLD_ON_ITALIC_OFF			LITERAL1
-BOLD_OFF_ITALIC_ON			LITERAL1
-BOLD_ON_ITALIC_ON			LITERAL1
+BOLD_OFF_ITALIC_OFF	LITERAL1
+BOLD_ON_ITALIC_OFF	LITERAL1
+BOLD_OFF_ITALIC_ON	LITERAL1
+BOLD_ON_ITALIC_ON	LITERAL1
 
 HORISONTAL_ALIGNMENT_LEFT	LITERAL1
-HORISONTAL_ALIGNMENT_CENTER LITERAL1
+HORISONTAL_ALIGNMENT_CENTER	LITERAL1
 HORISONTAL_ALIGNMENT_RIGHT	LITERAL1
 
-VERTICAL_ALIGNMENT_TOP		LITERAL1
+VERTICAL_ALIGNMENT_TOP	LITERAL1
 VERTICAL_ALIGNMENT_CENTER	LITERAL1
 VERTICAL_ALIGNMENT_BOTTOM	LITERAL1
 
-HORIZONTAL					LITERAL1
-VERTICAL					LITERAL1
+HORIZONTAL	LITERAL1
+VERTICAL	LITERAL1
 
-DB_TYPE_LABEL				LITERAL1
-DB_TYPE_BUTTON				LITERAL1
-DB_TYPE_TEXT				LITERAL1
-DB_TYPE_SIGNAL				LITERAL1
-DB_TYPE_RADIOGROUP			LITERAL1
+DB_TYPE_LABEL	LITERAL1
+DB_TYPE_BUTTON	LITERAL1
+DB_TYPE_TEXT	LITERAL1
+DB_TYPE_SIGNAL	LITERAL1
+DB_TYPE_RADIOGROUP	LITERAL1
 
-DEFAULT_UART_BAUDRATE		LITERAL1
-DEFAULT_UART_TIMEOUT   		LITERAL1
-DEFAULT_TWI_ADDRESS    		LITERAL1
-DEFAULT_TWI_FREQUENCY		LITERAL1
-DEFAULT_TWI_TIMEOUT			LITERAL1
-DEFAULT_SPI_FREQUENCY		LITERAL1
-DEFAULT_VIEW    			LITERAL1
+DEFAULT_UART_BAUDRATE	LITERAL1
+DEFAULT_UART_TIMEOUT	LITERAL1
+DEFAULT_TWI_ADDRESS	LITERAL1
+DEFAULT_TWI_FREQUENCY	LITERAL1
+DEFAULT_TWI_TIMEOUT	LITERAL1
+DEFAULT_SPI_FREQUENCY	LITERAL1
+DEFAULT_VIEW	LITERAL1
