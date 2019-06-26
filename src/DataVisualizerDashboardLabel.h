@@ -5,14 +5,14 @@
 
 class DataVisualizer;
 class DataVisualizerDashboardLabel {
-    friend class DataVisualizerDashboard;
+  friend class DataVisualizerDashboard;
 
-  private:
-    uint16_t id;
-    DataVisualizer* visualizer;
+ private:
+  uint16_t id;
+  DataVisualizer* visualizer;
 
-  public:
-    DataVisualizerDashboardLabel(void);
+ public:
+  DataVisualizerDashboardLabel (void);
 };
 
 typedef DataVisualizerDashboardLabel DashboardLabel;

@@ -6,17 +6,17 @@
 struct DataPacket;
 class DataVisualizer;
 class DataVisualizerDashboardNumericInput {
-    friend class DataVisualizerDashboard;
+  friend class DataVisualizerDashboard;
 
-  private:
-    uint16_t id;
-    DataPacket* packet;
-    DataVisualizer* visualizer;
+ private:
+  uint16_t id;
+  DataPacket* packet;
+  DataVisualizer* visualizer;
 
-  public:
-    DataVisualizerDashboardNumericInput(void);
-    int32_t read(void);
-    bool feed(void);
+ public:
+  DataVisualizerDashboardNumericInput (void);
+  bool feed (void);
+  int32_t read (void);
 };
 
 typedef DataVisualizerDashboardNumericInput DashboardNumericInput;

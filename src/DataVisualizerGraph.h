@@ -9,18 +9,18 @@
 class DataVisualizer;
 class DataVisualizerGraphAxis;
 class DataVisualizerGraph {
-    friend class DataVisualizer;
-    friend class DataVisualizerGraphAxis;
+  friend class DataVisualizer;
+  friend class DataVisualizerGraphAxis;
 
-  private:
-    uint16_t id;
-    DataVisualizer* visualizer;
+ private:
+  uint16_t id;
+  DataVisualizer* visualizer;
 
-  public:
-    DataVisualizerGraph(void);
-    DataVisualizerGraphAxis addAxis(const char *title);
-    DataVisualizerGraphAxis addAxis(const char *title, RgbColor color);
-    DataVisualizerGraphAxis addAxis(const char *title, RgbColor color, int32_t yMin, int32_t yMax);
+ public:
+  DataVisualizerGraph (void);
+  DataVisualizerGraphAxis addAxis (const char *title);
+  DataVisualizerGraphAxis addAxis (const char *title, RgbColor color);
+  DataVisualizerGraphAxis addAxis (const char *title, RgbColor color, int32_t yMin, int32_t yMax);
 };
 
 typedef DataVisualizerGraph Graph;

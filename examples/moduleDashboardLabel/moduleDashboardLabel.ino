@@ -3,29 +3,32 @@
 Terminal terminal;
 
 void setup() {
-    Visualizer.begin(GATEWAY_SERIAL);
+  Visualizer.begin (GATEWAY_UART);
 }
 
 void loop() {
-    if(Visualizer.setup(CONFIGURATION_AUTOSTART)) {
-        Dashboard dashboard = Visualizer.addDashboard("My Dashboard");
+  /****************************************************************/
+  /* WARNING: Initializing elements blocks process                */
+  /****************************************************************/
+  if (Visualizer.setup (CONFIGURATION_AUTOSTART)) {
+    Dashboard dashboard = Visualizer.addDashboard ("My Dashboard");
 
-        ConfigDashboardLabel configDashboardLabel = {
-            .zIndex             = 0,
-            .x                  = 50,
-            .y                  = 50,
-            .width              = 100,
-            .height             = 25,
-            .fontSize           = 20,
-            .attribute          = BOLD_ON_ITALIC_OFF,
-            .aligmentHorisontal = HORISONTAL_ALIGNMENT_CENTER,
-            .aligmentVertical   = VERTICAL_ALIGNMENT_CENTER,
-            .backgroundColor    = COLOR_WHITE,
-            .backgroundAlpha    = 0,
-            .forgroundColor     = COLOR_BLACK,
-            .forgroundAlpha     = 255
-        };
+    ConfigDashboardLabel configDashboardLabel;
+    configDashboardLabel.zIndex             = 0;
+    configDashboardLabel.x                  = 50;
+    configDashboardLabel.y                  = 50;
+    configDashboardLabel.width              = 100;
+    configDashboardLabel.height             = 25;
+    configDashboardLabel.fontSize           = 20;
+    configDashboardLabel.bolt               = false;
+    configDashboardLabel.italic             = false;
+    configDashboardLabel.aligmentHorizontal = HORIZONTAL_ALIGNMENT_CENTER;
+    configDashboardLabel.aligmentVertical   = VERTICAL_ALIGNMENT_CENTER;
+    configDashboardLabel.backgroundColor    = COLOR_WHITE;
+    configDashboardLabel.backgroundAlpha    = 0;
+    configDashboardLabel.foregroundColor    = COLOR_BLACK;
+    configDashboardLabel.foregroundAlpha    = 255;
 
-        dashboard.addLabel("MyLabel", configDashboardLabel);
-    }
+    dashboard.addLabel ("MyLabel", configDashboardLabel);
+  }
 }

@@ -7,17 +7,17 @@ class DataVisualizer;
 class DataVisualizerDashboard;
 class DataVisualizerDashboardGraphChannel;
 class DataVisualizerDashboardGraph {
-    friend class DataVisualizerDashboard;
+  friend class DataVisualizerDashboard;
 
-  private:
-    uint16_t id;
-    uint8_t plotCount;
-    DataVisualizer* visualizer;
-    DataVisualizerDashboard *dashboard;
+ private:
+  uint16_t id;
+  uint8_t plotCount;
+  DataVisualizer* visualizer;
+  DataVisualizerDashboard *dashboard;
 
-  public:
-    DataVisualizerDashboardGraph(void);
-    DataVisualizerDashboardGraphChannel addChannel(const char* text);
+ public:
+  DataVisualizerDashboardGraph (void);
+  DataVisualizerDashboardGraphChannel addChannel (const char* text);
 };
 
 typedef DataVisualizerDashboardGraph DashboardGraph;

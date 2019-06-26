@@ -3,21 +3,22 @@
 
 #include "DataVisualizer.h"
 
+
 struct DataPacket;
 class DataVisualizer;
 class DataVisualizerGraphAxisCursor {
-    friend class DataVisualizer;
-    friend class DataVisualizerGraphAxis;
+  friend class DataVisualizer;
+  friend class DataVisualizerGraphAxis;
 
-  private:
-    uint16_t id;
-    DataPacket* packet;
-    DataVisualizer* visualizer;
+ private:
+  uint16_t id;
+  DataPacket* packet;
+  DataVisualizer* visualizer;
 
-  public:
-    DataVisualizerGraphAxisCursor(void);
-    int32_t read(void);
-    bool feed(void);
+ public:
+  DataVisualizerGraphAxisCursor (void);
+  bool feed (void);
+  int32_t read (void);
 };
 
 typedef DataVisualizerGraphAxisCursor GraphAxisCursor;

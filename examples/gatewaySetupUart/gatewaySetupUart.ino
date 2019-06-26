@@ -1,7 +1,7 @@
 #include <DataVisualizer.h>
 
 void setup() {
-    Visualizer.begin(GATEWAY_SERIAL);
+  Visualizer.begin (GATEWAY_UART);
 }
 
 void loop() {

@@ -5,16 +5,16 @@
 
 class DataVisualizer;
 class DataVisualizerGraphAxisChannel {
-    friend class DataVisualizer;
-    friend class DataVisualizerGraphAxis;
+  friend class DataVisualizer;
+  friend class DataVisualizerGraphAxis;
 
-  private:
-    uint16_t id;
-    DataVisualizer* visualizer;
+ private:
+  uint16_t id;
+  DataVisualizer* visualizer;
 
-  public:
-    DataVisualizerGraphAxisChannel(void);
-    void write(int32_t value);
+ public:
+  DataVisualizerGraphAxisChannel (void);
+  void write (int32_t value);
 };
 
 typedef DataVisualizerGraphAxisChannel GraphAxisChannel;

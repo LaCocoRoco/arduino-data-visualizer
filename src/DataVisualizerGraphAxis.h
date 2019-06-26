@@ -8,20 +8,20 @@ class DataVisualizerGraph;
 class DataVisualizerGraphAxisChannel;
 class DataVisualizerGraphAxisCursor;
 class DataVisualizerGraphAxis {
-    friend class DataVisualizer;
-    friend class DataVisualizerGraph;
+  friend class DataVisualizer;
+  friend class DataVisualizerGraph;
 
-  private:
-    uint16_t id;
-    DataVisualizer* visualizer;
-    DataVisualizerGraph* graph;
+ private:
+  uint16_t id;
+  DataVisualizer* visualizer;
+  DataVisualizerGraph* graph;
 
-  public:
-    DataVisualizerGraphAxis(void);
-    DataVisualizerGraphAxisChannel addChannel(const char *label);
-    DataVisualizerGraphAxisChannel addChannel(const char *label, RgbColor color);
-    DataVisualizerGraphAxisCursor addCursor(const char *label);
-    DataVisualizerGraphAxisCursor addCursor(const char *label, RgbColor color);
+ public:
+  DataVisualizerGraphAxis (void);
+  DataVisualizerGraphAxisChannel addChannel (const char *label);
+  DataVisualizerGraphAxisChannel addChannel (const char *label, RgbColor color);
+  DataVisualizerGraphAxisCursor addCursor (const char *label);
+  DataVisualizerGraphAxisCursor addCursor (const char *label, RgbColor color);
 };
 
 typedef DataVisualizerGraphAxis GraphAxis;

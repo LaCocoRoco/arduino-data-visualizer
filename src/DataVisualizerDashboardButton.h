@@ -6,18 +6,18 @@
 struct DataPacket;
 class DataVisualizer;
 class DataVisualizerDashboardButton {
-    friend class DataVisualizerDashboard;
+  friend class DataVisualizerDashboard;
 
-  private:
-    bool toggle;
-    uint16_t id;
-    DataPacket* packet;
-    DataVisualizer* visualizer;
+ private:
+  bool toggle;
+  uint16_t id;
+  DataPacket* packet;
+  DataVisualizer* visualizer;
 
-  public:
-    DataVisualizerDashboardButton(void);
-    bool pressed(void);
-    bool toggled(void);
+ public:
+  DataVisualizerDashboardButton (void);
+  bool pressed (void);
+  bool toggled (void);
 };
 
 typedef DataVisualizerDashboardButton DashboardButton;

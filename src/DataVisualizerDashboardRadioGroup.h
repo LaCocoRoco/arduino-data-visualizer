@@ -5,17 +5,17 @@
 
 class DataVisualizer;
 class DataVisualizerDashboardRadioGroup {
-    friend class DataVisualizerDashboard;
+  friend class DataVisualizerDashboard;
 
-  private:
-    uint16_t id;
-    DataPacket* packet;
-    DataVisualizer* visualizer;
+ private:
+  uint16_t id;
+  DataPacket* packet;
+  DataVisualizer* visualizer;
 
-  public:
-    DataVisualizerDashboardRadioGroup(void);
-    uint8_t selected(void);
-    bool feed(void);
+ public:
+  DataVisualizerDashboardRadioGroup (void);
+  bool pressed (void);
+  uint8_t selected (void);
 };
 
 typedef DataVisualizerDashboardRadioGroup DashboardRadioGroup;
