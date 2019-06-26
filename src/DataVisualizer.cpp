@@ -238,6 +238,10 @@ DataVisualizerDashboard DataVisualizer::addDashboard (const char* title) {
   return this->addDashboard (title, COLOR_WHITE, 400);
 }
 
+DataVisualizerDashboard DataVisualizer::addDashboard (const char* title, uint16_t height) {
+  return this->addDashboard (title, COLOR_WHITE, height);
+}
+
 DataVisualizerDashboard DataVisualizer::addDashboard (const char* title, RgbColor color, uint16_t height) {
   DataVisualizerDashboard dashboard;
 

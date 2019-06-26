@@ -136,6 +136,7 @@ class DataVisualizer : AtmelDataGateway {
   DataVisualizerGraph addGraph (const char* title, RgbColor bgColor);
 
   DataVisualizerDashboard addDashboard (const char* title);
+  DataVisualizerDashboard addDashboard (const char* title, uint16_t height);
   DataVisualizerDashboard addDashboard (const char* title, RgbColor color, uint16_t height);
 
   /*********************************************************/

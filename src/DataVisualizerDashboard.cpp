@@ -682,7 +682,7 @@ DataVisualizerDashboardRectangle DataVisualizerDashboard::addRectangle (const ui
   memcpy (&configDashboardRectangle.height,          config + POSITION_HEIGHT,                     sizeof (configDashboardRectangle.height));
   memcpy (&configDashboardRectangle.backgroundAlpha, config + POSITION_RECTANGLE_ALPHA_BACKGROUND, sizeof (configDashboardRectangle.backgroundAlpha));
   memcpy (&configDashboardRectangle.backgroundColor, config + POSITION_RECTANGLE_COLOR_BACKGROUND, sizeof (configDashboardRectangle.backgroundColor));
-  memcpy (&configDashboardRectangle.backgroundAlpha, config + POSITION_RECTANGLE_ALPHA_FOREGROUND, sizeof (configDashboardRectangle.foregroundAlpha));
+  memcpy (&configDashboardRectangle.foregroundAlpha, config + POSITION_RECTANGLE_ALPHA_FOREGROUND, sizeof (configDashboardRectangle.foregroundAlpha));
   memcpy (&configDashboardRectangle.foregroundColor, config + POSITION_RECTANGLE_COLOR_FOREGROUND, sizeof (configDashboardRectangle.foregroundColor));
 
   this->addRectangle (configDashboardRectangle);

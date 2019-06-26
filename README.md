@@ -33,7 +33,7 @@ DataVisualizer
 ├── bool setup(Configuration config);
 ├── bool request(void);
 ├── void refresh(void);
-├── void reset(void);	
+├── void reset(void);   
 ├── void onTransmit(void (*)(uint8_t*, uint16_t));
 ├── void onReceive(uint16_t (*)(uint8_t*, uint16_t));
 ├── void onTransceive(uint16_t (*)(uint8_t*, uint8_t*, uint16_t));
@@ -61,10 +61,11 @@ DataVisualizer
 └── GraphAxis addAxis(const char *title, RgbColor color, int32_t yMin, int32_t yMax);
 │   ├── GraphAxisChannel addChannel(const char *label);
 │   └── GraphAxisChannel addChannel(const char *label, RgbColor color);
-│   	├── GraphAxisCursor addCursor(const char *label);
-│   	└── GraphAxisCursor addCursor(const char *label, RgbColor color);
+│       ├── GraphAxisCursor addCursor(const char *label);
+│       └── GraphAxisCursor addCursor(const char *label, RgbColor color);
 ├── Dashboard addDashboard(const char* title);
-└── Dashboard addDashboard(const char* title, RgbColor color, uint16_t height);
+├── Dashboard addDashboard(const char* title);
+└── Dashboard addDashboard(const char* title, uint16_t height, RgbColor color, uint16_t height);
     ├── DashboardButton addButton(const uint8_t* config);
     ├── DashboardButton addButton(const char* text, ConfigDashboardButton config);
     ├── DashboardButton addButton(const char* textOn, const char* textOff, ConfigDashboardButton config);
@@ -111,6 +112,6 @@ DataVisualizer
     ├── DataVisualizerDashboardSurfaceGrid addSurfaceGrid(const uint8_t* config);
     ├── DataVisualizerDashboardSurfaceGrid addSurfaceGrid(ConfigDashboardSurfaceGrid config);
     └── DataVisualizerDashboardTable addTable(const uint8_t* config);
-	└── DataVisualizerDashboardTableCell addCell(const char* text);
+    └── DataVisualizerDashboardTableCell addCell(const char* text);
             └── void write(int32_t value);
 ```
