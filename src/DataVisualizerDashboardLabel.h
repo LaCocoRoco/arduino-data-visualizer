@@ -12,7 +12,7 @@ class DataVisualizerDashboardLabel {
   DataVisualizer* visualizer;
 
  public:
-  DataVisualizerDashboardLabel (void);
+  DataVisualizerDashboardLabel(void);
 };
 
 typedef DataVisualizerDashboardLabel DashboardLabel;

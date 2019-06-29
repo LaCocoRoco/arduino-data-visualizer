@@ -5,15 +5,15 @@ DashboardProgressBar dashboardProgressBar;
 int tick, data;
 
 void setup() {
-  Visualizer.begin (GATEWAY_UART);
+  Visualizer.begin(GATEWAY_UART);
 }
 
 void loop() {
   /****************************************************************/
   /* WARNING: Initializing elements blocks process                */
   /****************************************************************/
-  if (Visualizer.setup (CONFIGURATION_AUTOSTART)) {
-    Dashboard dashboard = Visualizer.addDashboard ("My Dashboard");
+  if (Visualizer.setup(CONFIGURATION_AUTOSTART)) {
+    Dashboard dashboard = Visualizer.addDashboard("My Dashboard");
 
     ConfigDashboardProgressBar configDashboardProgressBar;
     configDashboardProgressBar.zIndex  = 0;
@@ -26,7 +26,7 @@ void loop() {
     configDashboardProgressBar.value   = 100;
     configDashboardProgressBar.color   = COLOR_GREEN;
 
-    dashboardProgressBar = dashboard.addProgressBar (configDashboardProgressBar);
+    dashboardProgressBar = dashboard.addProgressBar(configDashboardProgressBar);
   }
 
   /* write value to progress bar */
@@ -35,6 +35,6 @@ void loop() {
     /* reset data if necessary */
     if (data++ > 200) data = 0;
     /* write data */
-    dashboardProgressBar.write (data);
+    dashboardProgressBar.write(data);
   }
 }

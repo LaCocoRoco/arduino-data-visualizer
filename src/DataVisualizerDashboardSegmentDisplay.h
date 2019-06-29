@@ -12,8 +12,8 @@ class DataVisualizerDashboardSegmentDisplay {
   DataVisualizer* visualizer;
 
  public:
-  DataVisualizerDashboardSegmentDisplay (void);
-  void write (int32_t value);
+  DataVisualizerDashboardSegmentDisplay(void);
+  void write(int32_t value);
 };
 
 typedef DataVisualizerDashboardSegmentDisplay DashboardSegmentDisplay;

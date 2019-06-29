@@ -1,13 +1,13 @@
 #include "DataVisualizerDashboardButton.h"
 
-DataVisualizerDashboardButton::DataVisualizerDashboardButton (void) {
+DataVisualizerDashboardButton::DataVisualizerDashboardButton(void) {
   this->id = 0;
   this->toggle = 0;
   this->visualizer = 0;
   this->packet = 0;
 }
 
-bool DataVisualizerDashboardButton::pressed (void) {
+bool DataVisualizerDashboardButton::pressed(void) {
   if (!this->visualizer) return 0;
   if (!this->visualizer->handshake) return 0;
 
@@ -25,7 +25,7 @@ bool DataVisualizerDashboardButton::pressed (void) {
   return false;
 }
 
-bool DataVisualizerDashboardButton::toggled (void) {
+bool DataVisualizerDashboardButton::toggled(void) {
   this->pressed();
   return this->toggle;
 }

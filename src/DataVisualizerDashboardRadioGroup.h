@@ -13,9 +13,9 @@ class DataVisualizerDashboardRadioGroup {
   DataVisualizer* visualizer;
 
  public:
-  DataVisualizerDashboardRadioGroup (void);
-  bool pressed (void);
-  uint8_t selected (void);
+  DataVisualizerDashboardRadioGroup(void);
+  bool pressed(void);
+  uint8_t selected(void);
 };
 
 typedef DataVisualizerDashboardRadioGroup DashboardRadioGroup;

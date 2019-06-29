@@ -1,15 +1,15 @@
 #include <DataVisualizer.h>
 
 void setup() {
-  Visualizer.begin (GATEWAY_UART);
+  Visualizer.begin(GATEWAY_UART);
 }
 
 void loop() {
   /****************************************************************/
   /* WARNING: Initializing elements blocks process                */
   /****************************************************************/
-  if (Visualizer.setup (CONFIGURATION_AUTOSTART)) {
-    Dashboard dashboard = Visualizer.addDashboard ("My Dashboard");
+  if (Visualizer.setup(CONFIGURATION_AUTOSTART)) {
+    Dashboard dashboard = Visualizer.addDashboard("My Dashboard");
 
     ConfigDashboardRectangle configDashboardRectangle;
     configDashboardRectangle.zIndex          = 0;
@@ -22,6 +22,6 @@ void loop() {
     configDashboardRectangle.foregroundColor = COLOR_WHITE;
     configDashboardRectangle.foregroundAlpha = 0;
 
-    DashboardRectangle dashboardRectangle = dashboard.addRectangle (configDashboardRectangle);
+    DashboardRectangle dashboardRectangle = dashboard.addRectangle(configDashboardRectangle);
   }
 }

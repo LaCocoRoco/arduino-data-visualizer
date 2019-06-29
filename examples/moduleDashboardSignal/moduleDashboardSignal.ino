@@ -5,15 +5,15 @@ DashboardSignal dashboardSignal;
 int tick;
 
 void setup() {
-  Visualizer.begin (GATEWAY_UART);
+  Visualizer.begin(GATEWAY_UART);
 }
 
 void loop() {
   /****************************************************************/
   /* WARNING: Initializing elements blocks process.               */
   /****************************************************************/
-  if (Visualizer.setup (CONFIGURATION_AUTOSTART)) {
-    Dashboard dashboard = Visualizer.addDashboard ("My Dashboard");
+  if (Visualizer.setup(CONFIGURATION_AUTOSTART)) {
+    Dashboard dashboard = Visualizer.addDashboard("My Dashboard");
 
     ConfigDashboardSignal configDashboardSignal;
     configDashboardSignal.zIndex   = 0;
@@ -26,7 +26,7 @@ void loop() {
     configDashboardSignal.offColor = COLOR_GREEN;
     configDashboardSignal.offAlpha = 255;
 
-    dashboardSignal = dashboard.addSignal (configDashboardSignal);
+    dashboardSignal = dashboard.addSignal(configDashboardSignal);
   }
 
   /* switch signal on and off */

@@ -13,8 +13,8 @@ class DataVisualizerGraphAxisChannel {
   DataVisualizer* visualizer;
 
  public:
-  DataVisualizerGraphAxisChannel (void);
-  void write (int32_t value);
+  DataVisualizerGraphAxisChannel(void);
+  void write(int32_t value);
 };
 
 typedef DataVisualizerGraphAxisChannel GraphAxisChannel;

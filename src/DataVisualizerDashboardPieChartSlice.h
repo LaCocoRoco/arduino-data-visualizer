@@ -13,8 +13,8 @@ class DataVisualizerDashboardPieChartSlice {
   DataVisualizer* visualizer;
 
  public:
-  DataVisualizerDashboardPieChartSlice (void);
-  void write (int32_t value);
+  DataVisualizerDashboardPieChartSlice(void);
+  void write(int32_t value);
 };
 
 typedef DataVisualizerDashboardPieChartSlice DashboardPieChartSlice;

@@ -19,15 +19,15 @@ DashboardGraphChannel dashboardGraphChannel;
 int value;
 
 void setup() {
-  Visualizer.begin (GATEWAY_UART);
+  Visualizer.begin(GATEWAY_UART);
 }
 
 void loop() {
   /****************************************************************/
   /* WARNING: Initializing elements blocks process                */
   /****************************************************************/
-  if (Visualizer.setup (CONFIGURATION_AUTOSTART)) {
-    Dashboard dashboard = Visualizer.addDashboard ("My Dashboard");
+  if (Visualizer.setup(CONFIGURATION_AUTOSTART)) {
+    Dashboard dashboard = Visualizer.addDashboard("My Dashboard");
 
     byte configDashboardLabelTop[] = {
       0, // Dashboard ID
@@ -46,7 +46,7 @@ void loop() {
       255, 0, 0, 0, // Foreground Color
       'M', 'y', ' ', 'P', 'r', 'e', 'd', 'e', 'f', 'i', 'n', 'e', 'd', ' ', 'D', 'a', 's', 'h', 'b', 'o', 'a', 'r', 'd', '\0', // Text
     };
-    dashboard.addLabel (configDashboardLabelTop);
+    dashboard.addLabel(configDashboardLabelTop);
 
     byte configDashboardGraph[] = {
       0, // Dashboard ID
@@ -69,8 +69,8 @@ void loop() {
       1,
       1,
     };
-    DashboardGraph dashboardGraph = dashboard.addGraph (configDashboardGraph);
-    dashboardGraphChannel = dashboardGraph.addChannel ("My Channel");
+    DashboardGraph dashboardGraph = dashboard.addGraph(configDashboardGraph);
+    dashboardGraphChannel = dashboardGraph.addChannel("My Channel");
 
     byte configDashboardNumericInput[] = {
       0, // Dashboard ID
@@ -85,7 +85,7 @@ void loop() {
       232, 3, 0, 0, // Maximum
       0, 0, 0, 0, // Value
     };
-    dashboardNumericInput = dashboard.addNumericInput (configDashboardNumericInput);
+    dashboardNumericInput = dashboard.addNumericInput(configDashboardNumericInput);
 
     byte configDashboardLabelValue[] = {
       0, // Dashboard ID
@@ -104,7 +104,7 @@ void loop() {
       255, 0, 0, 0, // Foreground Color
       'O', 'v', 'e', 'r', 'r', 'i', 'd', 'e', ' ', 'G', 'r', 'a', 'p', 'h', ' ', 'V', 'a', 'l', 'u', 'e', ':', '\0', // Text
     };
-    dashboard.addLabel (configDashboardLabelValue);
+    dashboard.addLabel(configDashboardLabelValue);
 
     byte configDashboardButton[] = {
       0, // Dashboard ID
@@ -119,7 +119,7 @@ void loop() {
       'R', 'e', 's', 'e', 't', ' ', 'G', 'r', 'a', 'p', 'h', ' ', 'V', 'a', 'l', 'u', 'e', '\0', // Text
       0,
     };
-    dashboardButton = dashboard.addButton (configDashboardButton);
+    dashboardButton = dashboard.addButton(configDashboardButton);
   }
 
   /* read data from numeric input */
@@ -133,5 +133,5 @@ void loop() {
   }
 
   /* send data to graph channel */
-  dashboardGraphChannel.write (value);
+  dashboardGraphChannel.write(value);
 }

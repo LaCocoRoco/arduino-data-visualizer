@@ -1,11 +1,11 @@
 #include "DataVisualizerDashboardPieChart.h"
 
-DataVisualizerDashboardPieChart::DataVisualizerDashboardPieChart (void) {
+DataVisualizerDashboardPieChart::DataVisualizerDashboardPieChart(void) {
   this->id = 0;
   this->visualizer = 0;
 }
 
-DataVisualizerDashboardPieChartSlice DataVisualizerDashboardPieChart::addSlice (const char* text) {
+DataVisualizerDashboardPieChartSlice DataVisualizerDashboardPieChart::addSlice(const char* text) {
   DataVisualizerDashboardPieChartSlice dashboardPieChartSlice;
 
   if (!this->visualizer) return dashboardPieChartSlice;
@@ -20,18 +20,18 @@ DataVisualizerDashboardPieChartSlice DataVisualizerDashboardPieChart::addSlice (
   dashboardPieChartSlice.id         = streamId;
 
   MsgConfigStream msgConfigStream;
-  this->visualizer->protocol.configureStreamGetDefaults (&msgConfigStream);
+  this->visualizer->protocol.configureStreamGetDefaults(&msgConfigStream);
   msgConfigStream.streamId = streamId;
   msgConfigStream.type     = STREAM_INT_32;
   msgConfigStream.mode     = STREAM_OUT;
   msgConfigStream.state    = STREAM_ON;
-  this->visualizer->protocol.addStream (&msgConfigStream, text);
+  this->visualizer->protocol.addStream(&msgConfigStream, text);
 
   MsgConfigAddStreamToElement msgConfigAddStreamToElement;
   msgConfigAddStreamToElement.dashboardId = this->dashboard->id;
   msgConfigAddStreamToElement.elementId   = this->id;
   msgConfigAddStreamToElement.streamId    = streamId;
-  this->visualizer->protocol.addStreamToElement (&msgConfigAddStreamToElement);
+  this->visualizer->protocol.addStreamToElement(&msgConfigAddStreamToElement);
 
   return dashboardPieChartSlice;
 }

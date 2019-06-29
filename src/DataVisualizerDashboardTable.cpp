@@ -1,12 +1,12 @@
 #include "DataVisualizerDashboardTable.h"
 
-DataVisualizerDashboardTable::DataVisualizerDashboardTable (void) {
+DataVisualizerDashboardTable::DataVisualizerDashboardTable(void) {
   this->id = 0;
   this->visualizer = 0;
   this->plotCount = 0;
 }
 
-DataVisualizerDashboardTableCell DataVisualizerDashboardTable::addCell (const char* text) {
+DataVisualizerDashboardTableCell DataVisualizerDashboardTable::addCell(const char* text) {
   DataVisualizerDashboardTableCell dashboardTableCell;
 
   if (!this->visualizer) return dashboardTableCell;
@@ -21,18 +21,18 @@ DataVisualizerDashboardTableCell DataVisualizerDashboardTable::addCell (const ch
   dashboardTableCell.id         = streamId;
 
   MsgConfigStream msgConfigStream;
-  this->visualizer->protocol.configureStreamGetDefaults (&msgConfigStream);
+  this->visualizer->protocol.configureStreamGetDefaults(&msgConfigStream);
   msgConfigStream.streamId = streamId;
   msgConfigStream.type     = STREAM_INT_32;
   msgConfigStream.mode     = STREAM_OUT;
   msgConfigStream.state    = STREAM_ON;
-  this->visualizer->protocol.addStream (&msgConfigStream, text);
+  this->visualizer->protocol.addStream(&msgConfigStream, text);
 
   MsgConfigAddStreamToElement msgConfigAddStreamToElement;
   msgConfigAddStreamToElement.dashboardId = this->dashboard->id;
   msgConfigAddStreamToElement.elementId   = this->id;
   msgConfigAddStreamToElement.streamId    = streamId;
-  this->visualizer->protocol.addStreamToElement (&msgConfigAddStreamToElement);
+  this->visualizer->protocol.addStreamToElement(&msgConfigAddStreamToElement);
 
   return dashboardTableCell;
 }

@@ -15,9 +15,9 @@ class DataVisualizerDashboardButton {
   DataVisualizer* visualizer;
 
  public:
-  DataVisualizerDashboardButton (void);
-  bool pressed (void);
-  bool toggled (void);
+  DataVisualizerDashboardButton(void);
+  bool pressed(void);
+  bool toggled(void);
 };
 
 typedef DataVisualizerDashboardButton DashboardButton;

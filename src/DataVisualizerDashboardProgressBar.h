@@ -12,8 +12,8 @@ class DataVisualizerDashboardProgressBar {
   DataVisualizer* visualizer;
 
  public:
-  DataVisualizerDashboardProgressBar (void);
-  void write (int32_t value);
+  DataVisualizerDashboardProgressBar(void);
+  void write(int32_t value);
 };
 
 typedef DataVisualizerDashboardProgressBar DashboardProgressBar;

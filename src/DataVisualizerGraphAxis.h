@@ -17,11 +17,11 @@ class DataVisualizerGraphAxis {
   DataVisualizerGraph* graph;
 
  public:
-  DataVisualizerGraphAxis (void);
-  DataVisualizerGraphAxisChannel addChannel (const char *label);
-  DataVisualizerGraphAxisChannel addChannel (const char *label, RgbColor color);
-  DataVisualizerGraphAxisCursor addCursor (const char *label);
-  DataVisualizerGraphAxisCursor addCursor (const char *label, RgbColor color);
+  DataVisualizerGraphAxis(void);
+  DataVisualizerGraphAxisChannel addChannel(const char *label);
+  DataVisualizerGraphAxisChannel addChannel(const char *label, RgbColor color);
+  DataVisualizerGraphAxisCursor addCursor(const char *label);
+  DataVisualizerGraphAxisCursor addCursor(const char *label, RgbColor color);
 };
 
 typedef DataVisualizerGraphAxis GraphAxis;

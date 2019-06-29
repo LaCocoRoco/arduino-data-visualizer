@@ -5,15 +5,15 @@ DashboardSegmentDisplay dashboardSegmentDisplay;
 int tick, data;
 
 void setup() {
-  Visualizer.begin (GATEWAY_UART);
+  Visualizer.begin(GATEWAY_UART);
 }
 
 void loop() {
   /****************************************************************/
   /* WARNING: Initializing elements blocks process                */
   /****************************************************************/
-  if (Visualizer.setup (CONFIGURATION_AUTOSTART)) {
-    Dashboard dashboard = Visualizer.addDashboard ("My Dashboard");
+  if (Visualizer.setup(CONFIGURATION_AUTOSTART)) {
+    Dashboard dashboard = Visualizer.addDashboard("My Dashboard");
 
     ConfigDashboardSegmentDisplay configDashboardSegmentDisplay;
     configDashboardSegmentDisplay.zIndex = 0;
@@ -26,7 +26,7 @@ void loop() {
     configDashboardSegmentDisplay.color  = COLOR_RED;
     configDashboardSegmentDisplay.alpha  = 255;
 
-    dashboardSegmentDisplay = dashboard.addSegmentDisplay (configDashboardSegmentDisplay);
+    dashboardSegmentDisplay = dashboard.addSegmentDisplay(configDashboardSegmentDisplay);
   }
 
   /* write value to segment display */
@@ -35,6 +35,6 @@ void loop() {
     /* reset data if necessary */
     if (data++ > 99) data = 0;
     /* write data */
-    dashboardSegmentDisplay.write (data);
+    dashboardSegmentDisplay.write(data);
   }
 }

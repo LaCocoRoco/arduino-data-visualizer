@@ -106,38 +106,38 @@ class DataVisualizer : AtmelDataGateway {
   /*********************************************************/
   /* Internal                                              */
   /*********************************************************/
-  bool init (void);
-  void defaults (void);
-  void release (void);
-  void read (uint8_t* rxBuffer);
-  void write (uint16_t id, uint8_t* data, uint8_t length);
-  DataPacket* pack (uint16_t id, DataLength length);
+  bool init(void);
+  void defaults(void);
+  void release(void);
+  void read(uint8_t* rxBuffer);
+  void write(uint16_t id, uint8_t* data, uint8_t length);
+  DataPacket* pack(uint16_t id, DataLength length);
 
  public:
-  DataVisualizer (void);
+  DataVisualizer(void);
 
   /*********************************************************/
   /* Common                                                */
   /*********************************************************/
-  bool setup (Configuration config);
-  bool request (void);
-  void refresh (void);
-  void reset (void);
+  bool setup(Configuration config);
+  bool request(void);
+  void refresh(void);
+  void reset(void);
 
   /*********************************************************/
   /* Modules                                              */
   /*********************************************************/
-  void addInfo (const char* title, const char* description);
+  void addInfo(const char* title, const char* description);
 
-  DataVisualizerTerminal addTerminal (const char* title);
-  DataVisualizerTerminal addTerminal (const char* title, RgbColor bgColor, RgbColor fgColor);
+  DataVisualizerTerminal addTerminal(const char* title);
+  DataVisualizerTerminal addTerminal(const char* title, RgbColor bgColor, RgbColor fgColor);
 
-  DataVisualizerGraph addGraph (const char* title);
-  DataVisualizerGraph addGraph (const char* title, RgbColor bgColor);
+  DataVisualizerGraph addGraph(const char* title);
+  DataVisualizerGraph addGraph(const char* title, RgbColor bgColor);
 
-  DataVisualizerDashboard addDashboard (const char* title);
-  DataVisualizerDashboard addDashboard (const char* title, uint16_t height);
-  DataVisualizerDashboard addDashboard (const char* title, RgbColor color, uint16_t height);
+  DataVisualizerDashboard addDashboard(const char* title);
+  DataVisualizerDashboard addDashboard(const char* title, uint16_t height);
+  DataVisualizerDashboard addDashboard(const char* title, RgbColor color, uint16_t height);
 
   /*********************************************************/
   /* Gateway                                               */
@@ -145,25 +145,25 @@ class DataVisualizer : AtmelDataGateway {
  private:
   DataGateway gateway;
 
-  virtual void transmit (uint8_t* txBuffer, uint16_t length);
-  virtual uint16_t receive (uint8_t* rxBuffer, uint16_t length);
-  virtual uint16_t transceive (uint8_t* txBuffer, uint8_t* rxBuffer, uint16_t length);
+  virtual void transmit(uint8_t* txBuffer, uint16_t length);
+  virtual uint16_t receive(uint8_t* rxBuffer, uint16_t length);
+  virtual uint16_t transceive(uint8_t* txBuffer, uint8_t* rxBuffer, uint16_t length);
 
  public:
-  void begin (DataGateway com);
+  void begin(DataGateway com);
 
   /*********************************************************/
   /* Gateway External                                      */
   /*********************************************************/
  private:
-  void (*transmitCallback) (uint8_t*, uint16_t) = NULL;
-  uint16_t (*receiveCallback) (uint8_t*, uint16_t) = NULL;
-  uint16_t (*transceiveCallback) (uint8_t*, uint8_t*, uint16_t) = NULL;
+  void (*transmitCallback)(uint8_t*, uint16_t) = NULL;
+  uint16_t (*receiveCallback)(uint8_t*, uint16_t) = NULL;
+  uint16_t (*transceiveCallback)(uint8_t*, uint8_t*, uint16_t) = NULL;
 
  public:
-  void onTransmit (void (*) (uint8_t*, uint16_t));
-  void onReceive (uint16_t (*) (uint8_t*, uint16_t));
-  void onTransceive (uint16_t (*) (uint8_t*, uint8_t*, uint16_t));
+  void onTransmit(void (*)(uint8_t*, uint16_t));
+  void onReceive(uint16_t (*)(uint8_t*, uint16_t));
+  void onTransceive(uint16_t (*)(uint8_t*, uint8_t*, uint16_t));
 
 #ifdef GATEWAY_INCLUDED_UART
   /*********************************************************/
@@ -173,7 +173,7 @@ class DataVisualizer : AtmelDataGateway {
   AtmelDataGatewayUart gatewayUart;
 
  public:
-  void begin (Stream* uart);
+  void begin(Stream* uart);
 #endif
 
 #ifdef GATEWAY_INCLUDED_TWI
@@ -184,7 +184,7 @@ class DataVisualizer : AtmelDataGateway {
   AtmelDataGatewayTwi gatewayTwi;
 
  public:
-  void begin (TwoWire* twi, uint8_t address);
+  void begin(TwoWire* twi, uint8_t address);
 #endif
 
 #ifdef GATEWAY_INCLUDED_SPI
@@ -195,7 +195,7 @@ class DataVisualizer : AtmelDataGateway {
   AtmelDataGatewaySpi gatewaySpi;
 
  public:
-  void begin (SPIClass* spi, SPISettings settings, uint8_t ss);
+  void begin(SPIClass* spi, SPISettings settings, uint8_t ss);
 #endif
 };
 

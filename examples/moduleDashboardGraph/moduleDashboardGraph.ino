@@ -4,15 +4,15 @@ DashboardGraphChannel dashboardGraphChannelA;
 DashboardGraphChannel dashboardGraphChannelB;
 
 void setup() {
-  Visualizer.begin (GATEWAY_UART);
+  Visualizer.begin(GATEWAY_UART);
 }
 
 void loop() {
   /****************************************************************/
   /* WARNING: Initializing elements blocks process                */
   /****************************************************************/
-  if (Visualizer.setup (CONFIGURATION_AUTOSTART)) {
-    Dashboard dashboard = Visualizer.addDashboard ("My Dashboard");
+  if (Visualizer.setup(CONFIGURATION_AUTOSTART)) {
+    Dashboard dashboard = Visualizer.addDashboard("My Dashboard");
 
     ConfigDashboardGraph configDashboardGraph;
     configDashboardGraph.zIndex           = 0;
@@ -35,13 +35,13 @@ void loop() {
     configDashboardGraph.showPlot         = true;
     configDashboardGraph.showPoints       = false;
 
-    DashboardGraph dashboardGraph = dashboard.addGraph ("My Graph", configDashboardGraph);
+    DashboardGraph dashboardGraph = dashboard.addGraph("My Graph", configDashboardGraph);
 
-    dashboardGraphChannelA = dashboardGraph.addChannel ("My Channel A");
-    dashboardGraphChannelB = dashboardGraph.addChannel ("My Channel B");
+    dashboardGraphChannelA = dashboardGraph.addChannel("My Channel A");
+    dashboardGraphChannelB = dashboardGraph.addChannel("My Channel B");
   }
 
   /* send data to graph channel */
-  dashboardGraphChannelA.write (+500);
-  dashboardGraphChannelB.write (-500);
+  dashboardGraphChannelA.write(+500);
+  dashboardGraphChannelB.write(-500);
 }

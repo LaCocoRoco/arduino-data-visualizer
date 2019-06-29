@@ -17,10 +17,10 @@ class DataVisualizerGraph {
   DataVisualizer* visualizer;
 
  public:
-  DataVisualizerGraph (void);
-  DataVisualizerGraphAxis addAxis (const char *title);
-  DataVisualizerGraphAxis addAxis (const char *title, RgbColor color);
-  DataVisualizerGraphAxis addAxis (const char *title, RgbColor color, int32_t yMin, int32_t yMax);
+  DataVisualizerGraph(void);
+  DataVisualizerGraphAxis addAxis(const char *title);
+  DataVisualizerGraphAxis addAxis(const char *title, RgbColor color);
+  DataVisualizerGraphAxis addAxis(const char *title, RgbColor color, int32_t yMin, int32_t yMax);
 };
 
 typedef DataVisualizerGraph Graph;

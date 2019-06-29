@@ -16,8 +16,8 @@ class DataVisualizerDashboardTable {
   DataVisualizerDashboard *dashboard;
 
  public:
-  DataVisualizerDashboardTable (void);
-  DataVisualizerDashboardTableCell addCell (const char* text);
+  DataVisualizerDashboardTable(void);
+  DataVisualizerDashboardTableCell addCell(const char* text);
 };
 
 typedef DataVisualizerDashboardTable DashboardTable;

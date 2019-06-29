@@ -13,9 +13,9 @@ class DataVisualizerDashboardCheckBox {
   DataVisualizer* visualizer;
 
  public:
-  DataVisualizerDashboardCheckBox (void);
-  bool pressed (void);
-  bool selected (void);
+  DataVisualizerDashboardCheckBox(void);
+  bool pressed(void);
+  bool selected(void);
 };
 
 typedef DataVisualizerDashboardCheckBox DashboardCheckBox;

@@ -3,15 +3,15 @@
 DashboardSurfaceGrid dashboardSurfaceGrid;
 
 void setup() {
-  Visualizer.begin (GATEWAY_UART);
+  Visualizer.begin(GATEWAY_UART);
 }
 
 void loop() {
   /****************************************************************/
   /* WARNING: Initializing elements blocks process                */
   /****************************************************************/
-  if (Visualizer.setup (CONFIGURATION_AUTOSTART)) {
-    Dashboard dashboard = Visualizer.addDashboard ("My Dashboard");
+  if (Visualizer.setup(CONFIGURATION_AUTOSTART)) {
+    Dashboard dashboard = Visualizer.addDashboard("My Dashboard");
 
     ConfigDashboardSurfaceGrid configDashboardSurfaceGrid;
     configDashboardSurfaceGrid.zIndex             = 0;
@@ -40,6 +40,6 @@ void loop() {
     configDashboardSurfaceGrid.axisColor          = COLOR_BLACK;
     configDashboardSurfaceGrid.tickLabelColor     = COLOR_BLACK;
 
-    dashboardSurfaceGrid = dashboard.addSurfaceGrid (configDashboardSurfaceGrid, 10, 10);
+    dashboardSurfaceGrid = dashboard.addSurfaceGrid(configDashboardSurfaceGrid, 10, 10);
   }
 }

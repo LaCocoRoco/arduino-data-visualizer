@@ -1,12 +1,12 @@
 #include "DataVisualizerDashboardRadioGroup.h"
 
-DataVisualizerDashboardRadioGroup::DataVisualizerDashboardRadioGroup (void) {
+DataVisualizerDashboardRadioGroup::DataVisualizerDashboardRadioGroup(void) {
   this->id = 0;
   this->visualizer = 0;
   this->packet = 0;
 }
 
-bool DataVisualizerDashboardRadioGroup::pressed (void) {
+bool DataVisualizerDashboardRadioGroup::pressed(void) {
   if (!this->visualizer) return 0;
   if (!this->visualizer->handshake) return 0;
 
@@ -19,7 +19,7 @@ bool DataVisualizerDashboardRadioGroup::pressed (void) {
   return false;
 }
 
-uint8_t DataVisualizerDashboardRadioGroup::selected (void) {
+uint8_t DataVisualizerDashboardRadioGroup::selected(void) {
   if (!this->visualizer) return 0;
   if (!this->visualizer->handshake) return 0;
 

@@ -3,15 +3,15 @@
 Terminal terminal;
 
 void setup() {
-  Visualizer.begin (GATEWAY_UART);
+  Visualizer.begin(GATEWAY_UART);
 }
 
 void loop() {
   /****************************************************************/
   /* WARNING: Initializing elements blocks process                */
   /****************************************************************/
-  if (Visualizer.setup (CONFIGURATION_AUTOSTART)) {
-    Dashboard dashboard = Visualizer.addDashboard ("My Dashboard");
+  if (Visualizer.setup(CONFIGURATION_AUTOSTART)) {
+    Dashboard dashboard = Visualizer.addDashboard("My Dashboard");
 
     ConfigDashboardLabel configDashboardLabel;
     configDashboardLabel.zIndex             = 0;
@@ -29,6 +29,6 @@ void loop() {
     configDashboardLabel.foregroundColor    = COLOR_BLACK;
     configDashboardLabel.foregroundAlpha    = 255;
 
-    dashboard.addLabel ("MyLabel", configDashboardLabel);
+    dashboard.addLabel("MyLabel", configDashboardLabel);
   }
 }

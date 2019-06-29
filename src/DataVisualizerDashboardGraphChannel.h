@@ -12,8 +12,8 @@ class DataVisualizerDashboardGraphChannel {
   DataVisualizer* visualizer;
 
  public:
-  DataVisualizerDashboardGraphChannel (void);
-  void write (int32_t value);
+  DataVisualizerDashboardGraphChannel(void);
+  void write(int32_t value);
 };
 
 typedef DataVisualizerDashboardGraphChannel DashboardGraphChannel;

@@ -12,9 +12,9 @@ class DataVisualizerDashboardSignal {
   DataVisualizer* visualizer;
 
  public:
-  DataVisualizerDashboardSignal (void);
-  void on (void);
-  void off (void);
+  DataVisualizerDashboardSignal(void);
+  void on(void);
+  void off(void);
 };
 
 typedef DataVisualizerDashboardSignal DashboardSignal;

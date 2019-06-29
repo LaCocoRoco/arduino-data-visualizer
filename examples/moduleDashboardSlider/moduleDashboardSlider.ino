@@ -4,16 +4,16 @@ Terminal terminal;
 DashboardSlider dashboardSlider;
 
 void setup() {
-  Visualizer.begin (GATEWAY_UART);
+  Visualizer.begin(GATEWAY_UART);
 }
 
 void loop() {
   /****************************************************************/
   /* WARNING: Initializing elements blocks process.               */
   /****************************************************************/
-  if (Visualizer.setup (CONFIGURATION_AUTOSTART)) {
-    Dashboard dashboard = Visualizer.addDashboard ("My Dashboard");
-    terminal = Visualizer.addTerminal ("My Terminal");
+  if (Visualizer.setup(CONFIGURATION_AUTOSTART)) {
+    Dashboard dashboard = Visualizer.addDashboard("My Dashboard");
+    terminal = Visualizer.addTerminal("My Terminal");
 
     ConfigDashboardSlider configDashboardSlider;
     configDashboardSlider.zIndex  = 0;
@@ -25,12 +25,12 @@ void loop() {
     configDashboardSlider.maximum = 10;
     configDashboardSlider.initial = 5;
 
-    dashboardSlider = dashboard.addSlider (configDashboardSlider);
+    dashboardSlider = dashboard.addSlider(configDashboardSlider);
   }
 
   /* read data from slider */
   if (dashboardSlider.feed()) {
-    terminal.print ("Slider Input: ");
-    terminal.println (dashboardSlider.read());
+    terminal.print("Slider Input: ");
+    terminal.println(dashboardSlider.read());
   }
 }

@@ -4,15 +4,15 @@ DashboardPieChartSlice dashboardPieChartSliceA;
 DashboardPieChartSlice dashboardPieChartSliceB;
 
 void setup() {
-  Visualizer.begin (GATEWAY_UART);
+  Visualizer.begin(GATEWAY_UART);
 }
 
 void loop() {
   /****************************************************************/
   /* WARNING: Initializing elements blocks process                */
   /****************************************************************/
-  if (Visualizer.setup (CONFIGURATION_AUTOSTART)) {
-    Dashboard dashboard = Visualizer.addDashboard ("My Dashboard");
+  if (Visualizer.setup(CONFIGURATION_AUTOSTART)) {
+    Dashboard dashboard = Visualizer.addDashboard("My Dashboard");
 
     ConfigDashboardPieChart configDashboardPieChart;
     configDashboardPieChart.zIndex          = 0;
@@ -24,12 +24,12 @@ void loop() {
     configDashboardPieChart.titleColor      = COLOR_BLACK;
     configDashboardPieChart.backgroundColor = COLOR_WHITE;
 
-    DashboardPieChart dashboardPieChart = dashboard.addPieChart ("My Pie Chart", configDashboardPieChart);
+    DashboardPieChart dashboardPieChart = dashboard.addPieChart("My Pie Chart", configDashboardPieChart);
 
-    dashboardPieChartSliceA = dashboardPieChart.addSlice ("My Slice A");
-    dashboardPieChartSliceB = dashboardPieChart.addSlice ("My Slice B");
+    dashboardPieChartSliceA = dashboardPieChart.addSlice("My Slice A");
+    dashboardPieChartSliceB = dashboardPieChart.addSlice("My Slice B");
   }
 
-  dashboardPieChartSliceA.write (100);
-  dashboardPieChartSliceB.write (200);
+  dashboardPieChartSliceA.write(100);
+  dashboardPieChartSliceB.write(200);
 }

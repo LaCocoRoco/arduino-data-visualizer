@@ -16,9 +16,9 @@ class DataVisualizerGraphAxisCursor {
   DataVisualizer* visualizer;
 
  public:
-  DataVisualizerGraphAxisCursor (void);
-  bool feed (void);
-  int32_t read (void);
+  DataVisualizerGraphAxisCursor(void);
+  bool feed(void);
+  int32_t read(void);
 };
 
 typedef DataVisualizerGraphAxisCursor GraphAxisCursor;

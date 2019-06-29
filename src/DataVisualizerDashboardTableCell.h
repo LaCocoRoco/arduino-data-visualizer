@@ -12,8 +12,8 @@ class DataVisualizerDashboardTableCell {
   DataVisualizer* visualizer;
 
  public:
-  DataVisualizerDashboardTableCell (void);
-  void write (int32_t value);
+  DataVisualizerDashboardTableCell(void);
+  void write(int32_t value);
 };
 
 typedef DataVisualizerDashboardTableCell DashboardTableCell;

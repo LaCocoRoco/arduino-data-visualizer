@@ -14,9 +14,9 @@ class DataVisualizerDashboardNumericInput {
   DataVisualizer* visualizer;
 
  public:
-  DataVisualizerDashboardNumericInput (void);
-  bool feed (void);
-  int32_t read (void);
+  DataVisualizerDashboardNumericInput(void);
+  bool feed(void);
+  int32_t read(void);
 };
 
 typedef DataVisualizerDashboardNumericInput DashboardNumericInput;

@@ -362,54 +362,54 @@ class DataVisualizerDashboard {
  private:
   uint16_t id;
   DataVisualizer* visualizer;
-  DataVisualizerDashboardButton addButton (const char* text, ConfigDashboardButton config, uint8_t toggle);
-  DataVisualizerDashboardRadioGroup addRadioGroup (const char* text, ConfigDashboardRadioGroup config);
+  DataVisualizerDashboardButton addButton(const char* text, ConfigDashboardButton config, uint8_t toggle);
+  DataVisualizerDashboardRadioGroup addRadioGroup(const char* text, ConfigDashboardRadioGroup config);
 
  public:
-  DataVisualizerDashboard (void);
+  DataVisualizerDashboard(void);
 
-  DataVisualizerDashboardLabel addLabel (const uint8_t* config);
-  DataVisualizerDashboardLabel addLabel (const char* text, ConfigDashboardLabel config);
+  DataVisualizerDashboardLabel addLabel(const uint8_t* config);
+  DataVisualizerDashboardLabel addLabel(const char* text, ConfigDashboardLabel config);
 
-  DataVisualizerDashboardButton addButton (const uint8_t* config);
-  DataVisualizerDashboardButton addButton (const char* text, ConfigDashboardButton config);
-  DataVisualizerDashboardButton addButton (const char* textOn, const char* textOff, ConfigDashboardButton config);
+  DataVisualizerDashboardButton addButton(const uint8_t* config);
+  DataVisualizerDashboardButton addButton(const char* text, ConfigDashboardButton config);
+  DataVisualizerDashboardButton addButton(const char* textOn, const char* textOff, ConfigDashboardButton config);
 
-  DataVisualizerDashboardSlider addSlider (const uint8_t* config);
-  DataVisualizerDashboardSlider addSlider (ConfigDashboardSlider config);
+  DataVisualizerDashboardSlider addSlider(const uint8_t* config);
+  DataVisualizerDashboardSlider addSlider(ConfigDashboardSlider config);
 
-  DataVisualizerDashboardProgressBar addProgressBar (const uint8_t* config);
-  DataVisualizerDashboardProgressBar addProgressBar (ConfigDashboardProgressBar config);
+  DataVisualizerDashboardProgressBar addProgressBar(const uint8_t* config);
+  DataVisualizerDashboardProgressBar addProgressBar(ConfigDashboardProgressBar config);
 
-  DataVisualizerDashboardSignal addSignal (const uint8_t* config);
-  DataVisualizerDashboardSignal addSignal (ConfigDashboardSignal config);
+  DataVisualizerDashboardSignal addSignal(const uint8_t* config);
+  DataVisualizerDashboardSignal addSignal(ConfigDashboardSignal config);
 
-  DataVisualizerDashboardSegmentDisplay addSegmentDisplay (const uint8_t* config);
-  DataVisualizerDashboardSegmentDisplay addSegmentDisplay (ConfigDashboardSegmentDisplay config);
+  DataVisualizerDashboardSegmentDisplay addSegmentDisplay(const uint8_t* config);
+  DataVisualizerDashboardSegmentDisplay addSegmentDisplay(ConfigDashboardSegmentDisplay config);
 
-  DataVisualizerDashboardGraph addGraph (const uint8_t* config);
-  DataVisualizerDashboardGraph addGraph (const char* text, ConfigDashboardGraph config);
+  DataVisualizerDashboardGraph addGraph(const uint8_t* config);
+  DataVisualizerDashboardGraph addGraph(const char* text, ConfigDashboardGraph config);
 
-  DataVisualizerDashboardNumericInput addNumericInput (const uint8_t* config);
-  DataVisualizerDashboardNumericInput addNumericInput (ConfigDashboardNumericInput config);
+  DataVisualizerDashboardNumericInput addNumericInput(const uint8_t* config);
+  DataVisualizerDashboardNumericInput addNumericInput(ConfigDashboardNumericInput config);
 
-  DataVisualizerDashboardRadioGroup addRadioGroup (const uint8_t* config);
-  DataVisualizerDashboardRadioGroup addRadioGroup (ConfigDashboardRadioGroup config);
+  DataVisualizerDashboardRadioGroup addRadioGroup(const uint8_t* config);
+  DataVisualizerDashboardRadioGroup addRadioGroup(ConfigDashboardRadioGroup config);
 
-  DataVisualizerDashboardPieChart addPieChart (const uint8_t* config);
-  DataVisualizerDashboardPieChart addPieChart (const char* text, ConfigDashboardPieChart config);
+  DataVisualizerDashboardPieChart addPieChart(const uint8_t* config);
+  DataVisualizerDashboardPieChart addPieChart(const char* text, ConfigDashboardPieChart config);
 
-  DataVisualizerDashboardRectangle addRectangle (const uint8_t* config);
-  DataVisualizerDashboardRectangle addRectangle (ConfigDashboardRectangle config);
+  DataVisualizerDashboardRectangle addRectangle(const uint8_t* config);
+  DataVisualizerDashboardRectangle addRectangle(ConfigDashboardRectangle config);
 
-  DataVisualizerDashboardCheckBox addCheckBox (const uint8_t* config);
-  DataVisualizerDashboardCheckBox addCheckBox (const char* text, ConfigDashboardCheckBox config);
+  DataVisualizerDashboardCheckBox addCheckBox(const uint8_t* config);
+  DataVisualizerDashboardCheckBox addCheckBox(const char* text, ConfigDashboardCheckBox config);
 
-  DataVisualizerDashboardSurfaceGrid addSurfaceGrid (const uint8_t* config, uint8_t depthOfGrid, uint8_t widhtOfGrid);
-  DataVisualizerDashboardSurfaceGrid addSurfaceGrid (ConfigDashboardSurfaceGrid config, uint8_t depthOfGrid, uint8_t widhtOfGrid);
+  DataVisualizerDashboardSurfaceGrid addSurfaceGrid(const uint8_t* config, uint8_t depthOfGrid, uint8_t widhtOfGrid);
+  DataVisualizerDashboardSurfaceGrid addSurfaceGrid(ConfigDashboardSurfaceGrid config, uint8_t depthOfGrid, uint8_t widhtOfGrid);
 
-  DataVisualizerDashboardTable addTable (const uint8_t* config);
-  DataVisualizerDashboardTable addTable (const char* text, ConfigDashboardTable config);
+  DataVisualizerDashboardTable addTable(const uint8_t* config);
+  DataVisualizerDashboardTable addTable(const char* text, ConfigDashboardTable config);
 };
 
 typedef DataVisualizerDashboard Dashboard;

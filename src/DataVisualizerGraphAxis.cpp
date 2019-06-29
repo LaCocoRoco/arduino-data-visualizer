@@ -1,16 +1,16 @@
 #include "DataVisualizerGraphAxis.h"
 
-DataVisualizerGraphAxis::DataVisualizerGraphAxis (void) {
+DataVisualizerGraphAxis::DataVisualizerGraphAxis(void) {
   this->id = 0;
   this->visualizer = 0;
   this->graph = 0;
 }
 
-DataVisualizerGraphAxisChannel DataVisualizerGraphAxis::addChannel (const char *label) {
-  return this->addChannel (label, COLOR_RED);
+DataVisualizerGraphAxisChannel DataVisualizerGraphAxis::addChannel(const char *label) {
+  return this->addChannel(label, COLOR_RED);
 }
 
-DataVisualizerGraphAxisChannel DataVisualizerGraphAxis::addChannel (const char *label, RgbColor color) {
+DataVisualizerGraphAxisChannel DataVisualizerGraphAxis::addChannel(const char *label, RgbColor color) {
   DataVisualizerGraphAxisChannel channel;
 
   if (!this->visualizer) return channel;
@@ -21,29 +21,29 @@ DataVisualizerGraphAxisChannel DataVisualizerGraphAxis::addChannel (const char *
   channel.id         = streamId;
 
   MsgConfigStream msgConfigStream;
-  this->visualizer->protocol.configureStreamGetDefaults (&msgConfigStream);
+  this->visualizer->protocol.configureStreamGetDefaults(&msgConfigStream);
   msgConfigStream.streamId = streamId;
   msgConfigStream.type     = STREAM_INT_32;
   msgConfigStream.mode     = STREAM_OUT;
   msgConfigStream.state    = STREAM_ON;
-  this->visualizer->protocol.addStream (&msgConfigStream, label);
+  this->visualizer->protocol.addStream(&msgConfigStream, label);
 
   MsgAddStreamToAxis msgAddStreamToAxis;
-  this->visualizer->protocol.configureStreamToAxisGetDefaults (&msgAddStreamToAxis);
+  this->visualizer->protocol.configureStreamToAxisGetDefaults(&msgAddStreamToAxis);
   msgAddStreamToAxis.graphId  = this->graph->id;
   msgAddStreamToAxis.axisId   = this->id;
   msgAddStreamToAxis.streamId = streamId;
-  this->visualizer->protocol.setColor (msgAddStreamToAxis.lineColor, color);
-  this->visualizer->protocol.addStreamToAxis (&msgAddStreamToAxis);
+  this->visualizer->protocol.setColor(msgAddStreamToAxis.lineColor, color);
+  this->visualizer->protocol.addStreamToAxis(&msgAddStreamToAxis);
 
   return channel;
 }
 
-DataVisualizerGraphAxisCursor DataVisualizerGraphAxis::addCursor (const char *label) {
-  return this->addCursor (label, COLOR_GREEN);
+DataVisualizerGraphAxisCursor DataVisualizerGraphAxis::addCursor(const char *label) {
+  return this->addCursor(label, COLOR_GREEN);
 }
 
-DataVisualizerGraphAxisCursor DataVisualizerGraphAxis::addCursor (const char *label, RgbColor color) {
+DataVisualizerGraphAxisCursor DataVisualizerGraphAxis::addCursor(const char *label, RgbColor color) {
   DataVisualizerGraphAxisCursor cursor;
 
   if (!this->visualizer) return cursor;
@@ -52,25 +52,25 @@ DataVisualizerGraphAxisCursor DataVisualizerGraphAxis::addCursor (const char *la
   uint16_t streamId = this->visualizer->index++;
   cursor.visualizer = this->visualizer;
   cursor.id         = streamId;
-  cursor.packet     = this->visualizer->pack (streamId, LENGTH_4_BYTE);
+  cursor.packet     = this->visualizer->pack(streamId, LENGTH_4_BYTE);
 
   MsgConfigStream msgConfigStream;
-  this->visualizer->protocol.configureStreamGetDefaults (&msgConfigStream);
+  this->visualizer->protocol.configureStreamGetDefaults(&msgConfigStream);
   msgConfigStream.streamId = streamId;
   msgConfigStream.type     = STREAM_INT_32;
   msgConfigStream.mode     = STREAM_IN;
   msgConfigStream.state    = STREAM_ON;
-  this->visualizer->protocol.addStream (&msgConfigStream, label);
+  this->visualizer->protocol.addStream(&msgConfigStream, label);
 
   MsgAddCursorToGraph msgAddCursorToGraph;
-  this->visualizer->protocol.configureCursorToGraphGetDefaults (&msgAddCursorToGraph);
+  this->visualizer->protocol.configureCursorToGraphGetDefaults(&msgAddCursorToGraph);
   msgAddCursorToGraph.streamId         = streamId;
   msgAddCursorToGraph.graphId          = this->graph->id;
   msgAddCursorToGraph.axisId           = this->id;
   msgAddCursorToGraph.scaleNumerator   = 1;
   msgAddCursorToGraph.scaleDenominator = 1;
-  this->visualizer->protocol.setColor (msgAddCursorToGraph.color, color);
-  this->visualizer->protocol.addCursorToGraph (&msgAddCursorToGraph, label);
+  this->visualizer->protocol.setColor(msgAddCursorToGraph.color, color);
+  this->visualizer->protocol.addCursorToGraph(&msgAddCursorToGraph, label);
 
   return cursor;
 }

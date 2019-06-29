@@ -16,8 +16,8 @@ class DataVisualizerDashboardPieChart {
   DataVisualizerDashboard *dashboard;
 
  public:
-  DataVisualizerDashboardPieChart (void);
-  DataVisualizerDashboardPieChartSlice addSlice (const char* text);
+  DataVisualizerDashboardPieChart(void);
+  DataVisualizerDashboardPieChartSlice addSlice(const char* text);
 };
 
 typedef DataVisualizerDashboardPieChart DashboardPieChart;

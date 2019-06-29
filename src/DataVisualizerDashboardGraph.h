@@ -16,8 +16,8 @@ class DataVisualizerDashboardGraph {
   DataVisualizerDashboard *dashboard;
 
  public:
-  DataVisualizerDashboardGraph (void);
-  DataVisualizerDashboardGraphChannel addChannel (const char* text);
+  DataVisualizerDashboardGraph(void);
+  DataVisualizerDashboardGraphChannel addChannel(const char* text);
 };
 
 typedef DataVisualizerDashboardGraph DashboardGraph;

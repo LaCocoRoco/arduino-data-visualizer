@@ -1,12 +1,12 @@
 #include "DataVisualizerGraphAxisCursor.h"
 
-DataVisualizerGraphAxisCursor::DataVisualizerGraphAxisCursor (void) {
+DataVisualizerGraphAxisCursor::DataVisualizerGraphAxisCursor(void) {
   this->id = 0;
   this->visualizer = 0;
   this->packet = 0;
 }
 
-bool DataVisualizerGraphAxisCursor::feed (void) {
+bool DataVisualizerGraphAxisCursor::feed(void) {
   if (!this->visualizer) return 0;
   if (!this->visualizer->handshake) return 0;
 
@@ -18,11 +18,12 @@ bool DataVisualizerGraphAxisCursor::feed (void) {
 
   return false;
 }
-int32_t DataVisualizerGraphAxisCursor::read (void) {
+
+int32_t DataVisualizerGraphAxisCursor::read(void) {
   if (!this->visualizer) return 0;
   if (!this->visualizer->handshake) return 0;
 
   int32_t value;
-  memcpy (&value, this->packet->data, LENGTH_4_BYTE);
+  memcpy(&value, this->packet->data, LENGTH_4_BYTE);
   return value;
 }

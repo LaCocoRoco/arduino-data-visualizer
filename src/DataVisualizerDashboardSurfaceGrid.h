@@ -12,9 +12,9 @@ class DataVisualizerDashboardSurfaceGrid {
   DataVisualizer* visualizer;
 
  public:
-  DataVisualizerDashboardSurfaceGrid (void);
-  void set (void);
-  void update (void);
+  DataVisualizerDashboardSurfaceGrid(void);
+  void set(void);
+  void update(void);
 };
 
 typedef DataVisualizerDashboardSurfaceGrid DashboardSurfaceGrid;

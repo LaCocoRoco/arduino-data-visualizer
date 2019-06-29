@@ -13,9 +13,9 @@ class DataVisualizerDashboardSlider {
   DataVisualizer* visualizer;
 
  public:
-  DataVisualizerDashboardSlider (void);
-  bool feed (void);
-  int32_t read (void);
+  DataVisualizerDashboardSlider(void);
+  bool feed(void);
+  int32_t read(void);
 };
 
 typedef DataVisualizerDashboardSlider DashboardSlider;

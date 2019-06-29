@@ -12,7 +12,7 @@ class DataVisualizerDashboardRectangle {
   DataVisualizer* visualizer;
 
  public:
-  DataVisualizerDashboardRectangle (void);
+  DataVisualizerDashboardRectangle(void);
 };
 
 typedef DataVisualizerDashboardRectangle DashboardRectangle;

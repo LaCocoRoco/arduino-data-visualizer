@@ -4,16 +4,16 @@ Terminal terminal;
 DashboardNumericInput dashboardNumericInput;
 
 void setup() {
-  Visualizer.begin (GATEWAY_UART);
+  Visualizer.begin(GATEWAY_UART);
 }
 
 void loop() {
   /****************************************************************/
   /* WARNING: Initializing elements blocks process                */
   /****************************************************************/
-  if (Visualizer.setup (CONFIGURATION_AUTOSTART)) {
-    Dashboard dashboard = Visualizer.addDashboard ("My Dashboard");
-    terminal = Visualizer.addTerminal ("My Terminal");
+  if (Visualizer.setup(CONFIGURATION_AUTOSTART)) {
+    Dashboard dashboard = Visualizer.addDashboard("My Dashboard");
+    terminal = Visualizer.addTerminal("My Terminal");
 
     ConfigDashboardNumericInput configDashboardNumericInput;
     configDashboardNumericInput.zIndex  = 0;
@@ -25,12 +25,12 @@ void loop() {
     configDashboardNumericInput.maximum = +100;
     configDashboardNumericInput.value   = 0;
 
-    dashboardNumericInput = dashboard.addNumericInput (configDashboardNumericInput);
+    dashboardNumericInput = dashboard.addNumericInput(configDashboardNumericInput);
   }
 
   /* send data from slider to terminal */
   if (dashboardNumericInput.feed()) {
-    terminal.print ("Numeric Input Value: ");
-    terminal.println (dashboardNumericInput.read());
+    terminal.print("Numeric Input Value: ");
+    terminal.println(dashboardNumericInput.read());
   }
 }
