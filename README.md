@@ -4,9 +4,9 @@ The Atmel Data Protocol is a content independent protocol intended for transferr
 The connection can be established via a Serial Port or the Data Gateway Interface (EDBG-based Debugger). 
 
 ## Quick Guide
-1. Download [Michrochip Data Visualizer](https://gallery.microchip.com/api/v2/package/AtmelDataVisualizerInstaller-Standalone/2.20.674).
-2. Download [Arduino Data Visualizer](https://www.arduinolibraries.info/libraries/data-visualizer).
-3. Open Arduino, select example, compile and upload project.
+1. Download Michrochip Data Visualizer. <a href="https://www.microchip.com/mplab/avr-support/data-visualizer" target="_blank">`Link`</a>
+2. Download Arduino Data Visualizer Library.
+3. Open Arduino, select default example, compile and upload project.
 4. Open Data Visualizer, select Serial Port Panel and press Connect.
 
 ## Known Issues & Solution
@@ -23,9 +23,9 @@ The connection can be established via a Serial Port or the Data Gateway Interfac
 > The Slider has to be moved slowly.
 
 ## Reference
-- [Data Visualizer User's Guid (HTML)](https://www.microchip.com/webdoc/GUID-F897CF19-8EAC-457A-BE11-86BDAC9B59CF/index.html?GUID-477A2070-3316-4E56-BEA7-293CCCFB3EBA)
-- [Data Visualizer User's Guid (PDF)](http://ww1.microchip.com/downloads/en/DeviceDoc/40001903B.pdf)
-- [Microchip Data Visualizer](https://www.microchip.com/mplab/avr-support/data-visualizer)
+- <a href="https://www.microchip.com/webdoc/GUID-F897CF19-8EAC-457A-BE11-86BDAC9B59CF/index.html?GUID-477A2070-3316-4E56-BEA7-293CCCFB3EBA" target="_blank">`Data Visualizer User's Guid (HTML)`</a>
+- <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/40001903B.pdf" target="_blank">`Data Visualizer User's Guid (PDF)`</a>
+- <a href="https://www.microchip.com/mplab/avr-support/data-visualizer" target="_blank">`Microchip Data Visualizer`</a>
 
 ## Functions Tree Overview
 ```bash
@@ -43,7 +43,8 @@ DataVisualizer
 ├── void begin(SPIClass* spi, SPISettings settings, uint8_t ss);
 ├── void addInfo(const char* title, const char* description);
 ├── Terminal addTerminal(const char* title);
-├── Terminal addTerminal(const char* title, RgbColor bgColor, RgbColor fgColor);
+├── Terminal addTerminal(const char* title, uint16_t height);
+├── Terminal addTerminal(const char* title, uint16_t height, RgbColor bgColor, RgbColor fgColor);
 │   ├── uint16_t available(void);
 │   ├── void print(int n);
 │   ├── void print(long n);
@@ -64,8 +65,8 @@ DataVisualizer
 │       ├── GraphAxisCursor addCursor(const char *label);
 │       └── GraphAxisCursor addCursor(const char *label, RgbColor color);
 ├── Dashboard addDashboard(const char* title);
-├── Dashboard addDashboard(const char* title);
-└── Dashboard addDashboard(const char* title, uint16_t height, RgbColor color, uint16_t height);
+├── Dashboard addDashboard(const char* title, uint16_t height);
+└── Dashboard addDashboard(const char* title, uint16_t height, RgbColor color);
     ├── DashboardButton addButton(const uint8_t* config);
     ├── DashboardButton addButton(const char* text, ConfigDashboardButton config);
     ├── DashboardButton addButton(const char* textOn, const char* textOff, ConfigDashboardButton config);

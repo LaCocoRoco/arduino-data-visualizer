@@ -130,14 +130,15 @@ class DataVisualizer : AtmelDataGateway {
   void addInfo(const char* title, const char* description);
 
   DataVisualizerTerminal addTerminal(const char* title);
-  DataVisualizerTerminal addTerminal(const char* title, RgbColor bgColor, RgbColor fgColor);
+  DataVisualizerTerminal addTerminal(const char* title, uint16_t height);
+  DataVisualizerTerminal addTerminal(const char* title, uint16_t height, RgbColor bgColor, RgbColor fgColor);
 
   DataVisualizerGraph addGraph(const char* title);
   DataVisualizerGraph addGraph(const char* title, RgbColor bgColor);
 
   DataVisualizerDashboard addDashboard(const char* title);
   DataVisualizerDashboard addDashboard(const char* title, uint16_t height);
-  DataVisualizerDashboard addDashboard(const char* title, RgbColor color, uint16_t height);
+  DataVisualizerDashboard addDashboard(const char* title, uint16_t height, RgbColor color);
 
   /*********************************************************/
   /* Gateway                                               */

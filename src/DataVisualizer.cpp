@@ -160,10 +160,14 @@ void DataVisualizer::addInfo(const char *title, const char *description) {
 }
 
 DataVisualizerTerminal DataVisualizer::addTerminal(const char *title) {
-  return this->addTerminal(title, COLOR_WHITE, COLOR_BLACK);
+  return this->addTerminal(title, 400, COLOR_WHITE, COLOR_BLACK);
 }
 
-DataVisualizerTerminal DataVisualizer::addTerminal(const char *title, RgbColor bgColor, RgbColor fgColor) {
+DataVisualizerTerminal DataVisualizer::addTerminal(const char *title, uint16_t height) {
+  return this->addTerminal(title, height, COLOR_WHITE, COLOR_BLACK);
+}
+
+DataVisualizerTerminal DataVisualizer::addTerminal(const char *title, uint16_t height, RgbColor bgColor, RgbColor fgColor) {
   DataVisualizerTerminal terminal;
 
   if (!this->handshake) return terminal;
@@ -179,6 +183,7 @@ DataVisualizerTerminal DataVisualizer::addTerminal(const char *title, RgbColor b
   MsgConfigTerminal msgConfigTerminal;
   this->protocol.configureTerminalGetDefaults(&msgConfigTerminal);
   msgConfigTerminal.terminalId    = terminalId;
+  msgConfigTerminal.height      = height;
   this->protocol.setColor(msgConfigTerminal.backgroundColor, bgColor);
   this->protocol.setColor(msgConfigTerminal.foregroundColor, fgColor);
   this->protocol.addTerminal(&msgConfigTerminal, title);
@@ -235,14 +240,14 @@ DataVisualizerGraph DataVisualizer::addGraph(const char* title, RgbColor bgColor
 }
 
 DataVisualizerDashboard DataVisualizer::addDashboard(const char* title) {
-  return this->addDashboard(title, COLOR_WHITE, 500);
+  return this->addDashboard(title, 500, COLOR_WHITE);
 }
 
 DataVisualizerDashboard DataVisualizer::addDashboard(const char* title, uint16_t height) {
-  return this->addDashboard(title, COLOR_WHITE, height);
+  return this->addDashboard(title, height, COLOR_WHITE);
 }
 
-DataVisualizerDashboard DataVisualizer::addDashboard(const char* title, RgbColor color, uint16_t height) {
+DataVisualizerDashboard DataVisualizer::addDashboard(const char* title, uint16_t height, RgbColor color) {
   DataVisualizerDashboard dashboard;
 
   if (!this->handshake) return dashboard;
