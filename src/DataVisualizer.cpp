@@ -160,14 +160,10 @@ void DataVisualizer::addInfo(const char *title, const char *description) {
 }
 
 DataVisualizerTerminal DataVisualizer::addTerminal(const char *title) {
-  return this->addTerminal(title, 400, COLOR_WHITE, COLOR_BLACK);
+  return this->addTerminal(title, COLOR_WHITE, COLOR_BLACK);
 }
 
-DataVisualizerTerminal DataVisualizer::addTerminal(const char *title, uint16_t height) {
-  return this->addTerminal(title, height, COLOR_WHITE, COLOR_BLACK);
-}
-
-DataVisualizerTerminal DataVisualizer::addTerminal(const char *title, uint16_t height, RgbColor bgColor, RgbColor fgColor) {
+DataVisualizerTerminal DataVisualizer::addTerminal(const char *title, RgbColor bgColor, RgbColor fgColor) {
   DataVisualizerTerminal terminal;
 
   if (!this->handshake) return terminal;
@@ -183,7 +179,6 @@ DataVisualizerTerminal DataVisualizer::addTerminal(const char *title, uint16_t h
   MsgConfigTerminal msgConfigTerminal;
   this->protocol.configureTerminalGetDefaults(&msgConfigTerminal);
   msgConfigTerminal.terminalId    = terminalId;
-  msgConfigTerminal.height      = height;
   this->protocol.setColor(msgConfigTerminal.backgroundColor, bgColor);
   this->protocol.setColor(msgConfigTerminal.foregroundColor, fgColor);
   this->protocol.addTerminal(&msgConfigTerminal, title);
@@ -240,14 +235,14 @@ DataVisualizerGraph DataVisualizer::addGraph(const char* title, RgbColor bgColor
 }
 
 DataVisualizerDashboard DataVisualizer::addDashboard(const char* title) {
-  return this->addDashboard(title, 500, COLOR_WHITE);
+  return this->addDashboard(title, COLOR_WHITE, 500);
 }
 
 DataVisualizerDashboard DataVisualizer::addDashboard(const char* title, uint16_t height) {
-  return this->addDashboard(title, height, COLOR_WHITE);
+  return this->addDashboard(title, COLOR_WHITE, height);
 }
 
-DataVisualizerDashboard DataVisualizer::addDashboard(const char* title, uint16_t height, RgbColor color) {
+DataVisualizerDashboard DataVisualizer::addDashboard(const char* title, RgbColor color, uint16_t height) {
   DataVisualizerDashboard dashboard;
 
   if (!this->handshake) return dashboard;
@@ -366,9 +361,9 @@ void DataVisualizer::begin(TwoWire* twi, uint8_t address) {
 #endif
 
 #ifdef GATEWAY_INCLUDED_SPI
-void DataVisualizer::begin(SPIClass* spi, SPISettings settings, uint8_t ss) {
+void DataVisualizer::begin(SPIClass* spi, uint8_t ss) {
   this->gateway = GATEWAY_SPI;
-  this->gatewaySpi.begin(spi, settings, ss);
+  this->gatewaySpi.begin(spi, ss);
 }
 #endif
 

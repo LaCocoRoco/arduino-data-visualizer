@@ -40,11 +40,10 @@ DataVisualizer
 ├── void begin(DataGateway com);
 ├── void begin(Stream* uart);
 ├── void begin(TwoWire* twi, uint8_t address);    
-├── void begin(SPIClass* spi, SPISettings settings, uint8_t ss);
+├── void begin(SPIClass* spi, uint8_t ss);
 ├── void addInfo(const char* title, const char* description);
 ├── Terminal addTerminal(const char* title);
-├── Terminal addTerminal(const char* title, uint16_t height);
-├── Terminal addTerminal(const char* title, uint16_t height, RgbColor bgColor, RgbColor fgColor);
+├── Terminal addTerminal(const char* title, RgbColor bgColor, RgbColor fgColor);
 │   ├── uint16_t available(void);
 │   ├── void print(int n);
 │   ├── void print(long n);
@@ -65,8 +64,8 @@ DataVisualizer
 │       ├── GraphAxisCursor addCursor(const char *label);
 │       └── GraphAxisCursor addCursor(const char *label, RgbColor color);
 ├── Dashboard addDashboard(const char* title);
-├── Dashboard addDashboard(const char* title, uint16_t height);
-└── Dashboard addDashboard(const char* title, uint16_t height, RgbColor color);
+├── Dashboard addDashboard(const char* title);
+└── Dashboard addDashboard(const char* title, uint16_t height, RgbColor color, uint16_t height);
     ├── DashboardButton addButton(const uint8_t* config);
     ├── DashboardButton addButton(const char* text, ConfigDashboardButton config);
     ├── DashboardButton addButton(const char* textOn, const char* textOff, ConfigDashboardButton config);

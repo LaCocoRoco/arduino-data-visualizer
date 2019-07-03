@@ -1,7 +1,5 @@
 #include <DataVisualizer.h>
 
-Terminal terminal;
-
 void setup() {
   Visualizer.begin(GATEWAY_UART);
 }
