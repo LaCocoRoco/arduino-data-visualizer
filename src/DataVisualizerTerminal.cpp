@@ -49,8 +49,22 @@ void DataVisualizerTerminal::print(char c) {
   this->print(c);
 }
 
+void DataVisualizerTerminal::print(unsigned int n) {
+  char c[ITOA_MAX_LENGTH];
+  itoa(n, c, ITOA_DEC);
+  this->print(c);
+}
+
 void DataVisualizerTerminal::print(int n) {
-  this->print((long) n);
+  char c[ITOA_MAX_LENGTH];
+  itoa(n, c, ITOA_DEC);
+  this->print(c);
+}
+
+void DataVisualizerTerminal::print(unsigned long n) {
+  char c[ITOA_MAX_LENGTH];
+  itoa(n, c, ITOA_DEC);
+  this->print(c);
 }
 
 void DataVisualizerTerminal::print(long n) {
@@ -76,8 +90,22 @@ void DataVisualizerTerminal::println(char c) {
   this->visualizer->write(this->id, (uint8_t*) data, length);
 }
 
+void DataVisualizerTerminal::println(unsigned int n) {
+  char c[ITOA_MAX_LENGTH];
+  itoa(n, c, ITOA_DEC);
+  this->println(c);
+}
+
 void DataVisualizerTerminal::println(int n) {
-  this->println((long) n);
+  char c[ITOA_MAX_LENGTH];
+  itoa(n, c, ITOA_DEC);
+  this->println(c);
+}
+
+void DataVisualizerTerminal::println(unsigned long n) {
+  char c[ITOA_MAX_LENGTH];
+  itoa(n, c, ITOA_DEC);
+  this->println(c);
 }
 
 void DataVisualizerTerminal::println(long n) {

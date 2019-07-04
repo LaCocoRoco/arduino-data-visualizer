@@ -20,11 +20,15 @@ class DataVisualizerTerminal {
  public:
   DataVisualizerTerminal(void);
   uint16_t available(void);
+  void print(unsigned int n);
   void print(int n);
+  void print(unsigned long n);
   void print(long n);
   void print(char c);
   void print(const char *c);
+  void println(unsigned int n);
   void println(int n);
+  void println(unsigned long n);
   void println(long n);
   void println(char c);
   void println(const char *c);
