@@ -111,7 +111,7 @@ DataVisualizer
     ├── DashboardRectangle addRectangle(ConfigDashboardRectangle config);
     ├── DataVisualizerDashboardSurfaceGrid addSurfaceGrid(const uint8_t* config);
     ├── DataVisualizerDashboardSurfaceGrid addSurfaceGrid(ConfigDashboardSurfaceGrid config);
-    └── DataVisualizerDashboardTable addTable(const uint8_t* config);
+    ├── DataVisualizerDashboardTable addTable(const uint8_t* config);
     └── DataVisualizerDashboardTableCell addCell(const char* text);
             └── void write(int32_t value);
 ```
